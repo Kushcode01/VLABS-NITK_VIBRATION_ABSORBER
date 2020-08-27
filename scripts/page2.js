@@ -19,7 +19,8 @@ function runPage2() {
     text("VARIABLES", 655, 107);
     pop();
 
-    textSize(12);
+    textSize(14);
+    fill(230,165,50);
     text('w1 = ' + spring1.w1.toFixed(4) + " rad/s", 310, 520);
     text('w2 = ' + spring1.w2.toFixed(4) + " rad/s", 430, 520);
     text('w/w2 = ' + (spring1.w/spring1.w2).toFixed(4) + " rad/s", 310, 480)
@@ -27,7 +28,13 @@ function runPage2() {
     text('X1/Xst = ' + (abs(spring1.x1/(spring1.F0/spring1.k1))).toFixed(4) , 150, 480)
     text('X1 = ' + (abs(spring1.x1)).toFixed(4) , 150, 520)
     text('Xst = ' + ((spring1.F0/spring1.k1)).toFixed(4) , 150, 560)
+    text('M1 = ' + spring1.m1 , 75, 480)
+    text('K1 = ' +spring1.k1 , 75, 520)
 
+
+    strokeWeight(0.5);    
+    line(0, 440, 600, 440)
+    line(300,440,300,580)
     
     magFac1.initialise()
     magFac1.draw();

@@ -44,17 +44,17 @@ class DynamicGraph  {
         }
 
         stroke(0);
-        strokeWeight(1);
+        strokeWeight(2);
         line(this.x, this.y, this.x, this.y - this.h);
         line(this.x, this.y, this.x + this.w, this.y);
 
         strokeWeight(0);
         fill(0);
         textSize(18);
-        text(this.xLabel, this.x + this.w, this.y);
+        text(this.xLabel, this.x + this.w/2, this.y+20);
         translate(this.x, this.y);
         rotate(radians(-90));
-        text(this.yLabel, 10, -20);
+        text(this.yLabel, +this.h/2, -15);
 
         pop();
     }

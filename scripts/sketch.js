@@ -30,7 +30,7 @@ let w;
 let F0;
 
 // factor
-let factor = 5;
+let factor = 10;
 
 // images
 let img;
