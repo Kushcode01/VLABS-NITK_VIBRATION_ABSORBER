@@ -1,4 +1,4 @@
-# Rotating-Unbalance-VLABS-
+# Vibration_Absorber-VLABS-
 
 Link:
-https://abhilol123.github.io/Rotating-Unbalance-VLABS-/
+https://kushcode01.github.io/VLABS-NITK_VIBRATION_ABSORBER/
