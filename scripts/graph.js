@@ -1,5 +1,5 @@
 class Graph {
-    constructor(x, y, h, w, yLabel, xLabel)   {
+    constructor(x, y, h, w, yLabel, xLabel,x_equilibrium,y_equilibrium,h,hei,y1,width)   {
         this.wave = [];
         this.length = 0;
         this.x = x;
@@ -16,6 +16,7 @@ class Graph {
             this.wave = [];
             t = 0.05;
         }
+        
     }
 
     draw(r, g, b)  {
@@ -27,6 +28,8 @@ class Graph {
         noFill();
         for (let i = 0; i < this.wave.length; i++) {
             vertex(i + this.x, this.wave[i] + this.y);
+            strokeWeight(1);
+            line(i + this.x, this.wave[i] + this.y,x_equilibrium ,y_equilibrium-(h/2) -hei +y1 -(h/2) +10);
         }
         endShape();
 

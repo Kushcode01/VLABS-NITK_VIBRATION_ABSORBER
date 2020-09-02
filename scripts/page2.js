@@ -40,7 +40,7 @@ function runPage2() {
     magFac1.draw();
     
 
-    button3.draw()
+    //button3.draw()
     button4.draw()
 
     F0.draw();

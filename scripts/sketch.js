@@ -71,9 +71,9 @@ function setup() {
     checkbox = createCheckbox('Edit K1 and M1', false);
     checkbox.position(620, 450)
     checkbox.changed(myCheckedEvent);
-    //position_graph1 = new Graph(50, 200, 100, 220, "x1", "t");
+    //position_graph1 = new Graph(50, 200, 100, 220, "x1", "t",System.x_equilibrium,System.y_equilibrium,System.h,System.hei,System.y1,System.width);
 
-    //position_graph2 = new Graph(50, 300, 100, 220, "x2", "t");
+    //position_graph2 = new Graph(50, 300, 100, 220, "x2", "t",System.x_equilibrium,System.y_equilibrium,System.h,System.hei,System.y1,System.width);
 
     magFac1 = new DynamicGraph(50, 400, 300, 220, "X1/Xst", "w/w2",0,20,0,300, System.mag_func1);
     magFac2 = new DynamicGraph(50, 400, 300, 220, "X2/Xst", "w/w2",0,20,0,300, System.mag_func2);
@@ -89,10 +89,10 @@ function setup() {
     k2 = new NumberInput(620, 340, "K2 (N/m)", 200, 1000, 500, 50, true);
     m2 = new NumberInput(620, 380, "M2(kg)", 10, 100, 50, 1, true);
     button1 = new Button(645, 450, pause)
-    button2 = new Button(500, 150, graph)
-    button3 = new Button(500,110,back)
-    button4 = new Button(540, 150, graph)
-    button5 = new Button(500,110,back)
+    button2 = new Button(640, 480, graph)
+    //button3 = new Button(500,110,back)
+    button4 = new Button(640, 500, graph)
+    button5 = new Button(660,500,back)
     
 }
 

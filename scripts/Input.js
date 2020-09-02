@@ -17,23 +17,31 @@ class NumberInput {
 
     initialise() {
         if (this.initialised) {
-            
             this.input1 = createInput(this.inp);
-            this.input1.size(40, 20);
-            this.input1.position(this.x + this.w - 30, this.y - 20);
-            if(this.ifSlider){
+            this.input1.size(50, 20);
+            this.input1.position(this.x + this.w - 40, this.y-15);
+
+            this.input1.elt.setAttribute("type", "number");
+            this.input1.elt.setAttribute("min", this.min.toString());
+            this.input1.elt.setAttribute("max", this.max.toString());
+            this.input1.elt.setAttribute("step", this.change.toString());
+            this.input1.elt.setAttribute("value", this.iniVal.toString());
+
+            if (this.ifSlider) {
                 this.input2 = createSlider(this.min, this.max, this.inp, this.change);
                 this.input2.size(this.w, 20);
                 this.input2.position(this.x, this.y);
             }
+            this.initialised = false;
+        }
             
                            
             
             
-            this.initialised = false;   
+              
             
             
-        }
+        
     }
 
     
