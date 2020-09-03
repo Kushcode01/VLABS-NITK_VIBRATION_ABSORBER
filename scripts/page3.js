@@ -1,4 +1,4 @@
-function runPage3() {
+﻿function runPage3() {
     background(255);
     image(bg, 0, 0);
     
@@ -8,18 +8,19 @@ function runPage3() {
     push();
     textSize(36);
     textFont("Times");
-    text('TWO DEGREE OF FREEDOM SYSTEM',100, 40);
+    text('VIBRATION ABSORBER',200, 40);
 
     textSize(16);
     text("CONTROLS", 655, 417);
     text("VARIABLES", 655, 107);
     pop();
 
+    strokeWeight(0);
     textSize(14);
     fill(230,165,50);
-    text('w1 = ' + spring1.w1.toFixed(4) + " rad/s", 310, 520);
-    text('w2 = ' + spring1.w2.toFixed(4) + " rad/s", 430, 520);
-    text('w/w2 = ' + (spring1.w/spring1.w2).toFixed(4) + " rad/s", 310, 480)
+    text('ω1 = ' + spring1.w1.toFixed(4) + " rad/s", 310, 520);
+    text('ω2 = ' + spring1.w2.toFixed(4) + " rad/s", 450, 520);
+    text('ω/ω2 = ' + (spring1.w/spring1.w2).toFixed(4) + " rad/s", 310, 480)
     
     text('X2/Xst = ' + (abs(spring1.x2/(spring1.F0/spring1.k1))).toFixed(4) , 150, 480)
     text('X2 = ' + (abs(spring1.x2)).toFixed(4) , 150, 520)
