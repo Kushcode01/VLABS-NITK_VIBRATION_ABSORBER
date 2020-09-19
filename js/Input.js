@@ -47,6 +47,14 @@ class NumberInput {
         
     }
 
+    remove() {
+        this.input1.remove();
+        if (this.ifSlider) {
+            this.input2.remove();
+        }
+        this.initialised = true;
+    }
+
     
 
 
