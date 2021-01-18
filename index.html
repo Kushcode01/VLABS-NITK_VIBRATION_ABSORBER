@@ -11,9 +11,44 @@
   <script language="javascript" type="text/javascript" src="js/buttonIcon.js"></script>
   <script language="javascript" type="text/javascript" src="js/page2.js"></script>
   <script language="javascript" type="text/javascript" src="js/page3.js"></script>
-  <script src="https://togetherjs.com/togetherjs-min.js"></script>
   <script language="javascript" type="text/javascript" src="js/event_handling.js"></script>
+  
+   <script src="https://cdn.jsdelivr.net/npm/rxjs@6.5.4/bundles/rxjs.umd.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@convergence/convergence@latest/convergence.global.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@convergence/input-element-bindings@latest/browser/convergence-input-element-bindings.min.js"></script>
+  
   <link rel="stylesheet" href="css/style.css">
+  
+  var domainUrl = "https://kushcode01.github.io/VLABS-NITK_VIBRATION_ABSORBER/";
+  Convergence.connectAnonymously(domainUrl)
+    .then(initApp)
+    .catch((error) => {
+      console.log("Could not connect: " + error);
+    });
+  
+  
+  function initApp(domain) {
+    const modelService = domain.models();
+
+    modelService.openAutoCreate({
+      collection: "example", 
+      model: "getting-started",
+      data: { text: "Hello World"} 
+    })
+    .then(initModel)
+    .catch((error) => {
+      console.log("Could not open model: " + error);
+    });
+  }
+  
+  function initModel(model) {
+    const textArea = document.getElementById("textarea");
+    const realTimeString = model.elementAt("textValue");
+
+    // Sets the value of the text area and performs a two-way-binding.
+    ConvergenceInputElementBinder.bindTextInput(textArea, realTimeString);
+  }
+  
 </head>
 <style>  
 
@@ -23,6 +58,9 @@ input[type=number]::-webkit-inner-spin-button {
 
 </style>
 <body>
-  <button onclick="TogetherJS(this); return false;">Start TogetherJS</button>
+  <textarea id="textarea"></textarea>
+   <script type="text/javascript">
+     // See code snippets below
+   </script>
 </body>
 </html>
