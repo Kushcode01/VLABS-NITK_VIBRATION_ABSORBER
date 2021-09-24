@@ -1,4 +1,5 @@
 # Vibration_Absorber-VLABS-
 
+Under Simulation open expR(For non flash users)
 Link:
-https://kushcode01.github.io/VLABS-NITK_VIBRATION_ABSORBER/
+https://mdmv-nitk.vlabs.ac.in/exp8/index.html#
